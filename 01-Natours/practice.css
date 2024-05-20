@@ -29,11 +29,9 @@ body {
       rgb(126, 213, 111, 0.8),
       rgb(40, 180, 133, 0.8)
     ),
-    url(../img/hero.jpg);
+    url(img/hero.jpg);
   background-size: cover;
-  /* whatever the width of the viewport or the element it'll always try to fit the element inside of the box  */
   background-position: top;
-  /* now the top of the image will remain static and other side could get cropped | bottom | center |*/
 
   position: relative;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
@@ -64,9 +62,7 @@ body {
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
-
   backface-visibility: hidden;
-  /* to remove the going upward effect after the animation has ended */
   margin-bottom: 60px;
 }
 
@@ -79,9 +75,6 @@ body {
   animation-name: moveInLeft;
   animation-duration: 1s;
   animation-timing-function: ease-out;
-
-  /* animation-iteration-count: 3; */
-  /* animation-delay: 3s; */
 }
 
 .heading-primary-sub {
@@ -137,7 +130,6 @@ body {
   }
 }
 
-/* Pseudo class */
 .btn:link,
 .btn:visited {
   text-transform: uppercase;
@@ -152,12 +144,10 @@ body {
 .btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  /* x y blur scale color */
 }
 
 .btn:active {
   transform: translateY(-1px);
-  /* from the initial state */
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -166,7 +156,6 @@ body {
   color: #777;
 }
 
-/* Pseudo element */
 .btn::after {
   content: "";
   display: inline-block;
@@ -191,8 +180,5 @@ body {
 
 .btn-animated {
   animation: moveInBottom 0.5s ease-out 0.75s;
-  /* name duration timing delay */
-
   animation-fill-mode: backwards;
-  /* it will apply the styles of animation before the animation starts */
 }
